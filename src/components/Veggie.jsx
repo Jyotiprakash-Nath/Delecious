@@ -12,7 +12,7 @@ const Veggie = () => {
   const getVeggies = async () => {
     const getData = localStorage.getItem("veggies");
 
-    if (getData && getData !== "undefined") {
+    if (getData) {
       setVeggies(JSON.parse(getData));
     } else {
       const resp = await fetch(
